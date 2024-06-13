@@ -40,4 +40,20 @@ def replace(self):
 
 """
 
+from info import person
+class Person():
+
+    def __init__(self ,name ,age, city):
+        self.info = person
+
+    # def replace(self):
+         
+    def about_person(self):
+            print(self.info)
+
+person1 = person()
+
+person1.about_person
+
+
 
