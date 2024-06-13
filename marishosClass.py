@@ -40,20 +40,35 @@ def replace(self):
 
 """
 
+# Importing the person dictionary from info.py
 from info import person
-class Person():
 
-    def __init__(self ,name ,age, city):
-        self.info = person
+class Person:
+    def __init__(self, name, age, city):
+        self.name = name
+        self.age = age
+        self.city = city
 
-    # def replace(self):
-         
+        self.values = [name, age, city]
+
     def about_person(self):
-            print(self.info)
+        person_list = []
+        keys = []
 
-person1 = person()
+        for key in person:
+            person_list.append(person[key])
+            keys.append(key)
 
-person1.about_person
+        print("Original person values:", person_list)
 
+        # Replace original person values with the ones from the instance
+        for i, key in enumerate(keys):
+            person[key] = self.values[i]
+
+        print("Updated person dictionary:", person)
+
+# Example usage
+person_info = Person("mari", 20, "tbilisi")
+person_info.about_person()
 
 
